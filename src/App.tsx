@@ -3,12 +3,6 @@ import './App.css'
 import { getTodos, putTodo, addTodo, deleteAllTodos } from './api'
 import { TodoItemList } from './Components/TodoItemList'
 
-interface TodoItem {
-  id: number
-  value: string
-  completed: boolean
-}
-
 function App() {
   const [errors, setErrors] = useState(null)
   const [query, setQuery] = useState('')
