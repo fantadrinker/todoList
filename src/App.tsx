@@ -14,8 +14,8 @@ function App() {
   const deferredQuery = useDeferredValue(query);
   useEffect(() => {
     setLoading(true);
-    const todos = getTodos(false, query);
-    const completed = getTodos(true, query);
+    const todos = getTodos(false, deferredQuery);
+    const completed = getTodos(true, deferredQuery);
     Promise.all([todos, completed])
       .then((res) => {
         setTodos(res[0].data);
