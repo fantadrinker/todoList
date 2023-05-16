@@ -23,7 +23,6 @@ function App() {
     const todos = getTodos(false, query)
     const completed = getTodos(true, query)
     Promise.all([todos, completed]).then((res) => {
-      console.log(111, deferredQuery, res)
       setTodos(res[0].data)
       setCompletedTodos(res[1].data)
       setLoading(false)
