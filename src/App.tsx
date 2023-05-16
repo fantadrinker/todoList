@@ -3,6 +3,14 @@ import './App.css';
 import { getTodos, putTodo, addTodo, deleteAllTodos } from './api';
 import { TodoItemList } from './Components/TodoItemList';
 
+/**
+ * renders the todo app, including the search bar, todo list, and done list
+ * If there were more time or the search bar functionality was more complex 
+ * (like search suggestions), I would consider putting them away as a separate
+ * component/module.
+ * @returns JSX Element App
+ */
+
 function App() {
   const [errors, setErrors] = useState(null);
   const [query, setQuery] = useState('');

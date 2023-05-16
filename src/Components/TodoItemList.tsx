@@ -1,6 +1,14 @@
-// renders a list of items, accepts an array of items as props
-
 import React from 'react';
+
+/**
+ * 
+ * This is the TodoItemList component. It accepts an array of items as props
+ * and renders them as a list. It also accepts a callback function to handle
+ * changes to the items.
+ * 
+ * Not a big fan of passing the onChange function as a prop in general, but 
+ * at this scale it is not a big deal and I can save some time.
+ */
 
 interface TodoItemListProps {
   title: string;

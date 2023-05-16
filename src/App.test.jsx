@@ -4,6 +4,12 @@ import '@testing-library/jest-dom';
 
 import App from './App';
 
+/**
+ * This test suite is an attempt to test out the entire app, this might not 
+ * be considered a standard unit test, but I think with the scale of this app
+ * this is a good way to test it and make sure everything is working as expected.
+ */
+
 const mockFetch = jest.fn((url) => {
   if (url === 'http://localhost:3000/todos?completed=false&query=') {
     return Promise.resolve({
