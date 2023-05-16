@@ -85,16 +85,18 @@ function App() {
       <div className='main'>
         {loading && <div>loading...</div>}
         {errors && <div>Error: {errors}</div>}
-        <TodoItemList 
-          title="Todo"
-          items={todos} 
-          onChange={updateTodo} 
-        />
-        <TodoItemList 
-          title="Done"
-          items={completedTodos.slice(0, 10)} 
-          onChange={updateTodo} 
-        />
+        {!loading && !errors && (<>
+          <TodoItemList 
+            title="Todo"
+            items={todos} 
+            onChange={updateTodo} 
+          />
+          <TodoItemList 
+            title="Done"
+            items={completedTodos.slice(0, 10)} 
+            onChange={updateTodo} 
+          />
+        </>)}
       </div>
     </>
   )

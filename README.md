@@ -15,6 +15,8 @@ backend service running on localhost:3000
     npm install
     npm run dev
 
+Note: If you see `Error: NetworkError when attempting to fetch resource.`, please check if backend server is running locally on port 3000
+
 ## Testing
 
     npm run test
