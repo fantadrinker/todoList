@@ -1,3 +1,9 @@
+/**
+ * API file that handles all the requests to the backend.
+ *
+ */
+
+// should probably move this to an env variable
 const backendUrl = 'http://localhost:3000';
 
 export const getTodos = async (completed: boolean, query: string) => {
